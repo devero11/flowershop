@@ -1,0 +1,16 @@
+
+@font-face {
+  font-family: 'main-font';
+  src: url('../public/assets/fonts/HvDTrial_Brandon_Grotesque_light-BF64a625c93e709.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bold-font';
+  src: url('../public/assets/fonts/HvDTrial_Brandon_Grotesque_regular-BF64a625c9311e1.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+  font-family: 'main-font';
+}
