@@ -1,0 +1,23 @@
+.pastel{
+  background-color:  #99BAB9;
+
+}
+.carousel {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  display: flex; /* Align items in a row */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Enable snap scrolling in horizontal direction */
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on touch devices */
+}
+
+.carousel-item {
+  flex-shrink: 0; /* Prevent items from shrinking */
+  width: 100%; /* Adjust to desired width of each item */
+  scroll-snap-align: start; /* Align each item to the start of the viewport */
+  /* Optional styling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

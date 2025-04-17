@@ -1,0 +1,15 @@
+.prv {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+}
+
+.prv:hover {
+  transform: scale(1.1); /* zoom in by 10% */
+}
+.bs {
+ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.bs:hover {
+  transform: scale(1.1); /* zoom in by 10% */
+}
