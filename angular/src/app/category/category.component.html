@@ -1,0 +1,9 @@
+<div (mousedown)="onDragStart($event)" (mousemove)="onDragging($event)" (mouseup)="onDragEnd()" (mouseleave)="onDragEnd()" #scrollable class="flex mt-4 flex-row w-full no-scroll overflow-x-scroll">
+
+  @for(product of products; track index){
+    <div   [class]= "'min-w-'+prodSize + ' md:min-w-' + mdProdSize">
+     <app-product-item></app-product-item>
+    </div>
+  }
+</div>
+

@@ -1,4 +1,4 @@
-<div class="flex-1 flex-col h-16 justify-between max-h-16 flex md:max-h-46 md:h-48 ">
+<div class="z-50 bg-white flex-1 flex-col h-16 justify-between max-h-16 flex md:max-h-46 w-full md:h-48 fixed md:relative ">
   <div class="h-8 flex justify-end items-end px-6 hidden md:flex w-full">
     <div class="flex justify-center flex-row pr-2 items-center">
      <img class="h-6" src="assets/images/phone-rounded-svgrepo-com.png" alt=""> <a class=" hover:underline flex px-2 justify-center items-center text-base" href="">+40 740 162 365</a>
@@ -7,11 +7,11 @@
      <img class="h-6" src="assets/images/shopping-basket.png" alt=""> <a class=" hover:underline flex px-2 justify-center  items-center" href="">Coș (0)</a>
     </div>
   </div>
-  <div class="flex justify-between h-16 border-gray-300  border-b   md:h-26 w-full ">
-    <div class="hidden md:flex flex-1 items-center">
-      <form class="border border-gray-300 focus-within:border-green-200 hidden md:flex ml-4">
-        <input type="text" name="" class="text-xl flex-1 py-2 pl-4 focus:outline-0" placeholder="Cauta..." value="">
-        <button type="submit" class="p-2 flex-1 min-w-10">
+  <div class="flex justify-between h-16 border-gray-300  border-b   md:h-26  ">
+    <div class=" flex flex-1 items-center bg-white z-50">
+      <form class="border-0 md:border focus-within:border bg-white focus-within:right-4 focus-within:left-0 focus-within:absolute md:focus-within:w-auto md:focus-within:relative group border-gray-300 focus-within:border-green-200  flex ml-4">
+        <input type="text" name="" class="text-xl flex-1 py-2 pl-4 hidden md:flex  w-full group-focus-within:flex focus:outline-0" placeholder="Cauta..." value="">
+        <button type="submit" class="p-2 flex-1 w-10 max-w-10 min-w-10">
           <img class="h-6 w-auto" src="assets/images/icons8-search-64.png" alt="">
         </button>
       </form>
@@ -27,14 +27,25 @@
         sau ridicări din magazin
       </div>
     </div>
+    <div class="flex md:hidden flex-1">
+
+    </div>
   </div>
-  <div class="whitespace-nowrap leading-tight hidden md:flex flex-row  justify-between border-gray-300 border-b  flex-1">
-    <button type="button" class="px-2 flex-grow border-r border-gray-300">Flowers</button>
-    <button type="button" class="px-2 flex-grow border-r border-gray-300">Easter Gifts</button>
-    <button type="button" class="px-2 flex-grow border-r border-gray-300">Leterbox Flowers</button>
-    <button type="button" class="px-2 flex-grow border-r border-gray-300">Hand Tied Bouquets</button>
-    <button type="button" class="px-2 flex-grow border-r border-gray-300">House Plants</button>
-    <button type="button" class="px-2 flex-grow border-r border-gray-300">Hampers</button>
-    <button type="button" class="px-2 flex-grow ">Send A Greeting Card</button>
+
+  <button id="menu" class="flex-col text-base h-auto absolute right-0 top-4 justify-center leading-none items-center mx-4 cursor-pointer flex md:hidden">
+    <img src="assets/images/menus.png" class="h-6" alt="">
+    Meniu
+  </button>
+  <div class="whitespace-nowrap options leading-tight min-h-screen md:min-h-0 hidden md:flex  flex-col md:flex-row bg-white  md:justify-between border-gray-300 border-b  flex-1">
+    <div class="absolute w-16 h-16 right-0 top-2">
+
+    </div>
+    <button type="button" class="px-2 h-16 md:h-auto md:flex-grow text-3xl md:text-xl border-b md:border-r md:border-b-0 border-gray-300">Flowers</button>
+    <button type="button" class="px-2 h-16 md:h-auto md:flex-grow text-3xl md:text-xl border-b md:border-r md:border-b-0 border-gray-300">Easter Gifts</button>
+    <button type="button" class="px-2 h-16 md:h-auto md:flex-grow text-3xl md:text-xl border-b md:border-r md:border-b-0 border-gray-300">Leterbox Flowers</button>
+    <button type="button" class="px-2 h-16 md:h-auto md:flex-grow text-3xl md:text-xl border-b md:border-r md:border-b-0 border-gray-300">Hand Tied Bouquets</button>
+    <button type="button" class="px-2 h-16 md:h-auto md:flex-grow text-3xl md:text-xl border-b md:border-r md:border-b-0 border-gray-300">House Plants</button>
+    <button type="button" class="px-2 h-16 md:h-auto md:flex-grow text-3xl md:text-xl border-b md:border-r md:border-b-0 border-gray-300">Hampers</button>
+    <button type="button" class="px-2 h-16 md:h-auto md:flex-grow text-3xl md:text-xl border-b md:border-b-0 border-gray-300">Send A Greeting Card</button>
   </div>
 </div>

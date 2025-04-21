@@ -7,6 +7,6 @@ import {Input, Component } from '@angular/core';
   styleUrl: './product-item.component.css'
 })
 export class ProductItemComponent {
-  @Input() picUrl:string = "assets/images/placeholder/ChatGPT Image Apr 16, 2025, 03_32_14 PM.png"
+  @Input() picUrl:string = "https://i.imgur.com/2g3fOuW.png"
   @Input() name:string = "Tulip Triumph"
 }
