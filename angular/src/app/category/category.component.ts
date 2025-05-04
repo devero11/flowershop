@@ -1,4 +1,4 @@
-import { Component , ViewChild, ElementRef, Input } from '@angular/core';
+import { Component , ViewChild, ElementRef, Input, viewChild } from '@angular/core';
 import { ProductItemComponent } from '../product-item/product-item.component';
 import {CommonModule} from '@angular/common'
 @Component({
@@ -12,6 +12,7 @@ export class CategoryComponent {
   public index: number = 0
 
   @ViewChild('scrollable') scrollableRef!: ElementRef;
+  @ViewChild('top') scrollTop! :ElementRef;
   isDragging = false;
   startX = 0;
   scrollLeft = 0;
@@ -22,9 +23,11 @@ export class CategoryComponent {
   isCollaped:boolean = true
 
   onDragStart(event: MouseEvent): void {
-    this.isDragging = true;
-    this.startX = event.pageX - this.scrollableRef.nativeElement.offsetLeft;
-    this.scrollLeft = this.scrollableRef.nativeElement.scrollLeft;
+    if(this.isCollaped){
+      this.isDragging = true;
+      this.startX = event.pageX - this.scrollableRef.nativeElement.offsetLeft;
+      this.scrollLeft = this.scrollableRef.nativeElement.scrollLeft;
+    }
   }
 
   onDragging(event: MouseEvent): void {
@@ -45,6 +48,7 @@ export class CategoryComponent {
   }
   toggleView(): void{
     this.isCollaped = !this.isCollaped;
+    this.scrollTop.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
 }

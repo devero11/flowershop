@@ -1,12 +1,21 @@
-<div class="justify-between py-4 px-2 bold leading-none items-end flex text-center w-full ">
-  <hr class="flex-grow border-gray-400 pb-2">
+<div class="justify-between py-4 pb-2 md:pb-4 px-2 bold leading-none items-center flex text-center w-full scroll-mt-20 md:scroll-mt-0" #top>
+  <hr class="flex-grow border-gray-400 mt-2">
   <div class="bold text-2xl md:text-4xl tracking-wide hover:underline hover:text-gray-400  cursor-pointer px-2 md:px-6" (mouseup)= 'toggleView()'>Flori Si Buchete</div>
-  <div class="underline decoration-1 cursor-pointer md:text-2xl text-gray-500 hover:text-gray-400 pr-2 md:pr-6">Vezi Toate</div>
-  <hr class="flex-grow border-gray-400 pb-2">
+  <div class="underline min-h-full flex justify-center items-center decoration-1 cursor-pointer md:text-2xl h-full text-gray-500 hover:text-gray-400 pr-2 md:pr-6" (mouseup)= 'toggleView()' >{{isCollaped? 'Vezi Toate' : "Ascunde" }}</div>
+  <hr class="flex-grow border-gray-400 mt-2">
 </div>
-<div (mousedown)="onDragStart($event)" (mousemove)="onDragging($event)" (mouseup)="onDragEnd()" (mouseleave)="onDragEnd()" #scrollable class="flex mt-4 flex-row w-full no-scroll overflow-x-scroll">
+<div class="flex w-full justify-between " [ngClass]= "{'hidden':isCollaped}">
+  <div>{{products.length}} produse</div>
+  <select name="sort" id="sort">
+    <option value="Popularitate">Popularitate</option>
+    <option value="PretCrescator">Pret Crescător</option>
+    <option value="PretDescrescator">Pret Descrescător</option>
+    <option value="Noi">Noi</option>
+  </select>
+</div>
+<div (mousedown)="onDragStart($event)" (mousemove)="onDragging($event)" (mouseup)="onDragEnd()" (mouseleave)="onDragEnd()" #scrollable class="mt-0 md:mt-2 w-full no-scroll " [ngClass]="isCollaped? 'overflow-x-scroll flex  flex-row': 'overflow-x-hidden grid grid-cols-2 md:grid-cols-4'">
   @for(product of products | slice:0:viewAll(); track product){
-    <div   [class]= "'min-w-'+prodSize + ' md:min-w-' + mdProdSize">
+    <div   [ngClass]= "isCollaped? 'min-w-'+prodSize + ' md:min-w-' + mdProdSize : ''">
      <app-product-item [name]= product></app-product-item>
     </div>
   }
